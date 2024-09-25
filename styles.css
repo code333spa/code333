@@ -257,6 +257,10 @@ html {
     color: #f8f8f8;  /* Color claro para la sección de contacto */
 }
 
+textarea{
+    resize: none;
+}
+
 /* ----- Footer Styles ----- */
 footer {
     background-color: rgba(20, 20, 20, 0.95);  /* Fondo más oscuro */

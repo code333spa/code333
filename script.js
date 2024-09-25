@@ -88,3 +88,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Cierra el menú colapsable al hacer clic en cualquier enlace
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
+

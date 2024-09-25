@@ -291,7 +291,6 @@ textarea.custom-input {
     resize: none;
 }
 
-
 /* Ajustes globales para móviles */
 @media (max-width: 576px) {
     /* Ajuste del contenedor general */

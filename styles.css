@@ -292,90 +292,146 @@ textarea.custom-input {
 }
 
 
-/* Media query para pantallas muy pequeñas (teléfonos) */
+/* Ajustes globales para móviles */
 @media (max-width: 576px) {
+    /* Ajuste del contenedor general */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Hero Section */
     .hero h1 {
-        font-size: 36px;  /* Reduce el tamaño del título */
+        font-size: 30px;
+        margin-bottom: 20px;
     }
-    
+
     .hero p {
-        font-size: 16px;  /* Texto más pequeño para móviles */
+        font-size: 14px;
+        margin-bottom: 10px;
     }
-    
+
+    .hero a.btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Navbar */
     .navbar .navbar-brand {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
-    
+
     .navbar .navbar-nav .nav-link {
         font-size: 0.9rem;
     }
-    
+
+    /* Servicios */
     #services h2 {
-        font-size: 30px;  /* Título más pequeño para secciones */
+        font-size: 24px;
     }
-    
+
     #services .service-box {
-        padding: 30px;  /* Menor padding para tarjetas */
-        min-height: auto;  /* Eliminar altura mínima en móviles */
+        padding: 20px;
+        min-height: auto;
+        margin-bottom: 30px;
     }
-    
-    .service-box h3 {
-        font-size: 20px;  /* Tamaño de títulos ajustado */
+
+    #services h3 {
+        font-size: 18px;
+    }
+
+    #services p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* Contacto */
+    #contact h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    #contact p {
+        font-size: 14px;
     }
 
     #contact .custom-input {
-        font-size: 14px;
         padding: 10px;
+        font-size: 14px;
     }
 
     #contact .custom-btn {
-        font-size: 16px;
         padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 12px;
     }
 }
 
-/* Media query para pantallas medianas (tabletas) */
+/* Ajustes para tabletas (pantallas medianas) */
 @media (max-width: 768px) {
+    /* Hero Section */
     .hero h1 {
-        font-size: 48px;  /* Ajuste del título */
+        font-size: 40px;
+        margin-bottom: 20px;
     }
 
     .hero p {
         font-size: 18px;
+        margin-bottom: 15px;
     }
 
-    .navbar .navbar-brand {
-        font-size: 1.75rem;
+    .hero a.btn {
+        padding: 12px 25px;
+        font-size: 16px;
     }
 
-    .navbar .navbar-nav .nav-link {
-        font-size: 1rem;
-    }
-
+    /* Servicios */
     #services h2 {
-        font-size: 36px;
+        font-size: 30px;
+        margin-bottom: 40px;
     }
 
     #services .service-box {
         padding: 40px;
+        min-height: auto;
     }
-    
-    .service-box h3 {
-        font-size: 24px;
+
+    #services h3 {
+        font-size: 22px;
+    }
+
+    #services p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Contacto */
+    #contact h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    #contact p {
+        font-size: 16px;
     }
 
     #contact .custom-input {
-        font-size: 16px;
         padding: 12px;
+        font-size: 16px;
     }
 
     #contact .custom-btn {
-        font-size: 18px;
+        padding: 12px 30px;
+        font-size: 16px;
     }
 }
 
-/* Media query para pantallas grandes (escritorios y laptops) */
+/* Ajustes para pantallas grandes (escritorios y laptops) */
 @media (min-width: 992px) {
+    /* Hero Section */
     .hero h1 {
         font-size: 56px;
     }

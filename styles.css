@@ -107,6 +107,43 @@ p, li, span, a {
     background-color: #f39c12;  /* Ámbar más intenso en hover */
 }
 
+/* Estilos del menú móvil */
+.navbar-collapse {
+    text-align: center; /* Centra el texto de los elementos del menú */
+    background-color: rgba(20, 20, 20, 0.95); /* Fondo más oscuro para consistencia */
+}
+
+.navbar-nav {
+    margin: 0 auto; /* Asegura que los elementos estén centrados */
+}
+
+.navbar-nav .nav-link {
+    padding: 15px 0; /* Añade más espacio entre los enlaces del menú */
+    color: #f5f5f5; /* Asegura que el texto sea claro y consistente */
+    font-size: 18px; /* Aumenta el tamaño del texto para mejor visibilidad */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f39c12; /* Cambia el color en hover para consistencia */
+    background-color: transparent; /* Asegura que el fondo se mantenga transparente en hover */
+}
+
+.navbar-toggler {
+    border-color: transparent; /* Elimina el borde del icono de menú */
+}
+
+.navbar-toggler-icon {
+    background-color: #f5f5f5; /* Asegura que el icono de los 3 puntos sea visible */
+}
+
+.nav-item {
+    border-bottom: 1px solid #444; /* Añade una línea divisoria entre los elementos */
+}
+
+.nav-item:last-child {
+    border-bottom: none; /* Elimina la línea divisoria del último elemento */
+}
+
 /* Ajuste del scroll para los anclajes */
 html {
     scroll-padding-top: 80px; /* Ajustar el desplazamiento para compensar el navbar fijo */

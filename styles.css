@@ -307,6 +307,9 @@ textarea.custom-input {
     .hero a.btn {
         padding: 10px 20px;
         font-size: 14px;
+        display: block; /* Hacer el botón un bloque */
+        margin: 0 auto; /* Centrar el botón horizontalmente */
+        text-align: center; /* Centrar el texto dentro del botón */
     }
 
     /* Navbar */
@@ -377,6 +380,7 @@ textarea.custom-input {
         font-size: 12px;
     }
 }
+
 
 /* Ajustes para tabletas (pantallas medianas) */
 @media (max-width: 768px) {

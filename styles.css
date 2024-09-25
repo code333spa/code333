@@ -1,0 +1,292 @@
+/* Estilos personalizados */
+body {
+    font-family: 'Poppins', sans-serif;  /* Fuente moderna y limpia */
+    line-height: 1.6;
+    color: #333;  /* Texto general en gris oscuro */
+    background-color: #f8f9fa;  /* Fondo suave */
+    padding-top: 80px; /* Asegurar que el contenido no quede oculto detrás del navbar fijo */
+}
+
+/* Textos Generales */
+p, li, span, a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #555;  /* Color de texto general */
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e0e0e0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);  /* Sombra sutil */
+}
+
+.hero p {
+    font-size: 22px;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #cccccc;  /* Texto suavemente contrastado */
+}
+
+/* Estilo del Botón de "Cotiza tu Proyecto" */
+.hero a.btn {
+    background-color: #6c5ce7;  /* Color de fondo violeta */
+    color: #ffffff;  /* Texto blanco */
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Sombra para darle profundidad */
+}
+
+.hero a.btn:hover {
+    background-color: #8e24aa;  /* Cambiar color en hover */
+    color: #ffffff;  /* Asegurar que el texto siga siendo blanco */
+    border-color: #ffffff;  /* Añadir un borde blanco al hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  /* Sombra más pronunciada */
+}
+
+/* ----- Navbar Styles ----- */
+.navbar {
+    background: rgba(20, 20, 20, 0.95);  /* Fondo oscuro más elegante */
+    padding: 1.5rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  /* Sombra más pronunciada */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;  /* Fija la altura del navbar */
+}
+
+.navbar .navbar-brand {
+    font-size: 1.75rem;
+    color: #d4af37;  /* Cambiar el logo a un dorado elegante */
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-link {
+    font-size: 1.1rem;
+    color: #f5f5f5;  /* Un gris claro para los enlaces */
+    margin-right: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #f39c12;  /* Un toque de color ámbar en el hover */
+}
+
+/* Estilo del botón "Cotiza tu Proyecto" */
+.navbar .btn-primary {
+    background-color: #d4af37;  /* Color dorado para el botón */
+    border: none;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    border-radius: 30px;
+}
+
+.navbar .btn-primary:hover {
+    background-color: #f39c12;  /* Ámbar más intenso en hover */
+}
+
+/* Ajuste del scroll para los anclajes */
+html {
+    scroll-padding-top: 80px; /* Ajustar el desplazamiento para compensar el navbar fijo */
+}
+
+/* Sección de Servicios */
+#services {
+    padding: 120px 0; /* Aumentar el padding superior e inferior para mayor separación */
+    background-color: #000000;
+}
+
+#services h2 {
+    font-weight: 700;
+    font-size: 48px;
+    color: #9c27b0;  
+    text-transform: uppercase;
+    margin-bottom: 80px; /* Aumentar el margen inferior para más espacio debajo del título */
+}
+
+#services h3 {
+    font-weight: 600;
+    font-size: 28px;
+    color: #9c27b0;
+    margin-bottom: 40px; /* Añadir más espacio debajo de los títulos */
+}
+
+#services p {
+    font-weight: 300;
+    font-size: 18px;
+    color: #d3d3d3;
+    line-height: 1.8;
+    margin-bottom: 40px; /* Aumentar el espacio debajo de cada párrafo */
+}
+
+.service-box {
+    background-color: #1a1a1a;
+    padding: 60px; /* Aumentar el padding para hacer las tarjetas más espaciosas */
+    margin-bottom: 60px; /* Añadir más espacio debajo de cada tarjeta */
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease;
+    min-height: 450px;  /* Aumentar la altura mínima para mejorar la distribución */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.service-box:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+#services .row {
+    justify-content: space-evenly;
+    margin-bottom: 60px; /* Aumentar el espacio entre las filas */
+}
+
+#services .col-md-4 {
+    margin-bottom: 50px; /* Más espacio debajo de cada columna */
+}
+
+/* ----- Sección Sobre Nosotros ----- */
+.about-section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: rgba(0, 0, 0, 0.6);  /* Fondo semitransparente */
+}
+
+.about-section h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #eeeeee;  /* Color específico para el encabezado en esta sección */
+}
+
+.about-section p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #dddddd;  /* Color específico para el texto */
+}
+
+.about-section p, .about-section li, .about-section span, .about-section a {
+    color: #eeeeee;  /* Color uniforme para textos en esta sección */
+}
+
+/* ----- Formulario de Contacto ----- */
+#contact {
+    background: #1c1c1c;
+    color: white;
+    padding: 50px 0;
+}
+
+#contact .card {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+}
+
+#contact h1 {
+    color: #f8f8f8;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    color: #cccccc;  /* Color de texto */
+}
+
+#contact .custom-input {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#contact .custom-input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+#contact .custom-btn {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#contact .custom-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+#contact p, #contact li, #contact span, #contact a {
+    color: #f8f8f8;  /* Color claro para la sección de contacto */
+}
+
+/* ----- Footer Styles ----- */
+footer {
+    background-color: rgba(20, 20, 20, 0.95);  /* Fondo más oscuro */
+    color: #f5f5f5;  /* Texto claro */
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer .social-icons a {
+    color: #f5f5f5;  /* Íconos de redes sociales claros */
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #f39c12;  /* Un ámbar elegante en hover */
+}
+
+footer p {
+    color: #cccccc;  /* Texto en gris claro */
+}
+
+/* Textos dentro del Footer */
+footer p, footer li, footer span, footer a {
+    color: #f5f5f5;
+}
+
+/* Desactivar el resize del textarea */
+textarea.custom-input {
+    resize: none;
+}

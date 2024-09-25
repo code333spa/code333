@@ -1,11 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code 333</title>
+    <title>Code 333 - Agencia Digital</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Code 333</h1>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Code 333</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="#contact">Cotiza tu proyecto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center" style="background-image: url('/images/hero.jpg'); height: 100vh;">
+        <div class="container text-center text-white">
+            <h1 class="display-4 font-weight-bold">Transformamos tu negocio en digital</h1>
+            <p class="lead mt-3">Expertos en creación de sitios web de alto impacto y estrategias de marketing digital en redes sociales.</p>
+            <a href="#contact" class="btn btn-lg btn-light mt-4">Cotiza tu Proyecto</a>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="services" class="py-5" style="background-color: #000;">
+        <div class="container text-center">
+            <h2 class="mb-5" style="color: #a29bfe; font-family: 'Roboto', sans-serif;">Nuestros Servicios</h2>
+            <div class="row">
+                <!-- Desarrollo Web -->
+                <div class="col-md-3" data-aos="fade-up">
+                    <i class="fas fa-code fa-3x mb-4" style="color: #a29bfe;"></i>
+                    <h3 style="color: #a29bfe; font-family: 'Roboto', sans-serif; font-weight: 700;">Desarrollo Web</h3>
+                    <p style="font-family: 'Roboto', sans-serif; font-weight: 300; color: #fff;">Diseñamos y desarrollamos sitios web modernos y optimizados, adaptados a las necesidades de tu marca, utilizando tecnologías avanzadas. Ideal para empresas que buscan una fuerte presencia digital con un diseño atractivo y funcional.</p>
+                </div>
+                <!-- Marketing en Redes Sociales -->
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-bullhorn fa-3x mb-4" style="color: #a29bfe;"></i>
+                    <h3 style="color: #a29bfe; font-family: 'Roboto', sans-serif; font-weight: 700;">Marketing en Redes Sociales</h3>
+                    <p style="font-family: 'Roboto', sans-serif; font-weight: 300; color: #fff;">Gestionamos y potenciamos tu marca en plataformas clave como Instagram, Facebook y TikTok, implementando estrategias efectivas de contenido y publicidad para alcanzar tu público objetivo y aumentar el engagement.</p>
+                </div>
+                <!-- SEO y Posicionamiento -->
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-search fa-3x mb-4" style="color: #a29bfe;"></i>
+                    <h3 style="color: #a29bfe; font-family: 'Roboto', sans-serif; font-weight: 700;">SEO y Posicionamiento</h3>
+                    <p style="font-family: 'Roboto', sans-serif; font-weight: 300; color: #fff;">Aumentamos tu visibilidad en buscadores como Google mediante la optimización de contenido y auditorías técnicas, ayudando a atraer más clientes y mejorar la conversión a través de estrategias personalizadas de SEO.</p>
+                </div>
+                <!-- Mantenimiento y Soporte -->
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-cogs fa-3x mb-4" style="color: #a29bfe;"></i>
+                    <h3 style="color: #a29bfe; font-family: 'Roboto', sans-serif; font-weight: 700;">Mantenimiento y Soporte</h3>
+                    <p style="font-family: 'Roboto', sans-serif; font-weight: 300; color: #fff;">Ofrecemos soporte continuo y desarrollo evolutivo para mantener tus productos y servicios digitales siempre operativos, con soluciones a medida que se adaptan a las necesidades de tu negocio y garantizan su actualización constante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="about" class="about-section d-flex align-items-center" style="background-image: url('/images/about.jpg'); background-size: cover; background-position: center;">
+        <div class="container text-center text-white">
+            <h2 class="mb-4">¿Quiénes somos?</h2>
+            <p class="lead mb-5">En <strong>Code 333</strong>, somos un equipo apasionado por el diseño, la tecnología y el marketing digital. Nuestra misión es ayudar a pequeñas y grandes empresas a sobresalir en el competitivo mundo digital.</p>
+            <p>Desde el desarrollo de sitios web dinámicos hasta la gestión integral de tus redes sociales, cada proyecto es tratado con la máxima dedicación para asegurar resultados medibles y crecimiento constante para tu negocio.</p>
+        </div>
+    </section>
+
+    <!-- Formulario  -->
+    <section id="contact" class="d-flex align-items-center" style="background-image: url('/images/form.jpg'); background-size: cover; height: 100vh;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-white">
+                    <h1 class="display-4 font-weight-bold">Dinos más sobre tu proyecto</h1>
+                    <p class="lead">Completa el siguiente formulario y nos pondremos en contacto para discutir los detalles. ¡Hagamos que tu negocio crezca en el mundo digital!</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-4" style="background-color: rgba(0, 0, 0, 0.7); color: white; border-radius: 15px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);">
+                        <form action="https://formspree.io/f/manwgzoy" method="POST">
+                            <div class="form-group">
+                                <label for="name">Nombre completo</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="empresa">Empresa</label>
+                                <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Empresa">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono móvil</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Teléfono móvil">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Cuéntanos de tu proyecto</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Explícanos brevemente tu proyecto" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Enviar formulario</button>
+                        </form>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="social-icons mb-3">
+                <a href="https://www.instagram.com/" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://www.facebook.com/" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="https://www.tiktok.com/" class="text-white mx-2"><i class="fab fa-tiktok fa-lg"></i></a>
+            </div>
+            <p>&copy; 2023 Code 333 - Agencia Digital. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Duración de la animación
+        once: false,    // Permite que las animaciones se repitan
+      });
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>

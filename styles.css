@@ -1,474 +1,290 @@
-/* Estilos globales responsivos */
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --accent-color: #a876aa;
+  --main-transition: all .3s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
-    padding-top: 80px; /* Ajuste para navbar fijo */
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  padding-bottom: 0; /* Eliminar el padding inferior */
 }
 
-/* Textos Generales */
-p, li, span, a {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: #555;  /* Color de texto general */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Hero Section */
+.nav {
+  position: fixed;
+  background-color: rgba(20, 20, 20, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: var(--main-transition);
+  text-transform: uppercase;
+  z-index: 1000;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: 300;
+  transition: var(--main-transition);
+}
+
+/* Asegura el color morado en hover */
+.nav a:hover {
+  color: #a29bfe !important; /* Color morado con prioridad */
+}
+
+.nav a.current {
+  color: var(--accent-color);
+}
+
 .hero {
-    background-size: cover;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
+  background-image: url('https://images.unsplash.com/photo-1548284706-24b96b23d6d8?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
 }
 
 .hero h1 {
-    font-size: 56px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #e0e0e0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);  /* Sombra sutil */
+  font-size: 46px;
+  margin: -20px 0 20px;
 }
 
 .hero p {
-    font-size: 22px;
-    font-weight: 300;
-    max-width: 700px;
-    margin: 0 auto;
-    color: #cccccc;  /* Texto suavemente contrastado */
+  font-size: 16px;
+  letter-spacing: 0.2rem;
+  font-weight: 200;
 }
 
-/* Estilo del Botón de "Cotiza tu Proyecto" */
-.hero a.btn {
-    background-color: #6c5ce7;  /* Color de fondo violeta */
-    color: #ffffff;  /* Texto blanco */
-    font-size: 18px;
-    font-weight: 600;
-    padding: 12px 25px;
-    border-radius: 30px;
-    border: 2px solid transparent;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Sombra para darle profundidad */
+.content {
+  padding: 100px 0; /* Espaciado superior e inferior aumentado */
 }
 
-.hero a.btn:hover {
-    background-color: #8e24aa;  /* Cambiar color en hover */
-    color: #ffffff;  /* Asegurar que el texto siga siendo blanco */
-    border-color: #ffffff;  /* Añadir un borde blanco al hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);  /* Sombra más pronunciada */
+.content h2 {
+  font-size: 24px;
+  margin: 20px 0;
 }
 
-/* ----- Navbar Styles ----- */
-.navbar {
-    background: rgba(20, 20, 20, 0.95);  /* Fondo oscuro más elegante */
-    padding: 1.5rem 2rem;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  /* Sombra más pronunciada */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 80px;  /* Fija la altura del navbar */
+.content p {
+  color: #555;
+  line-height: 30px;
+  letter-spacing: 1.2px;
 }
 
-.navbar .navbar-brand {
-    font-size: 1.75rem;
-    color: #d4af37;  /* Cambiar el logo a un dorado elegante */
-    font-weight: bold;
+/* Estilos para el apartado de servicios */
+.row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
 }
 
-.navbar .navbar-nav .nav-link {
-    font-size: 1.1rem;
-    color: #f5f5f5;  /* Un gris claro para los enlaces */
-    margin-right: 1.5rem;
-    transition: color 0.3s ease;
+.service {
+  flex: 1; /* Permite que las tarjetas se expandan uniformemente */
+  margin: 20px; /* Espacio entre tarjetas */
 }
 
-.navbar .navbar-nav .nav-link:hover {
-    color: #f39c12;  /* Un toque de color ámbar en el hover */
+.service-card {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  border-radius: 15px;
+  padding: 30px; /* Espaciado interno aumentado */
+  text-align: center;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s; /* Suaviza la transición de transformación y sombra */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
 }
 
-/* Estilo del botón "Cotiza tu Proyecto" */
-.navbar .btn-primary {
-    background-color: #d4af37;  /* Color dorado para el botón */
-    border: none;
-    padding: 0.75rem 1.5rem;
-    transition: background-color 0.3s ease;
-    font-size: 1.1rem;
-    border-radius: 30px;
+.service-card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada al pasar el mouse */
 }
 
-.navbar .btn-primary:hover {
-    background-color: #f39c12;  /* Ámbar más intenso en hover */
+.service h3 {
+  margin: 10px 0; /* Espacio entre el título y el contenido */
+  font-size: 20px; /* Aumentar el tamaño de fuente */
 }
 
-/* Ajuste del scroll para los anclajes */
-html {
-    scroll-padding-top: 80px; /* Ajustar el desplazamiento para compensar el navbar fijo */
+.service p {
+  color: #ddd; /* Texto más claro para el contenido */
+  font-size: 14px; /* Ajustar tamaño de texto */
 }
 
-/* Sección de Servicios */
-#services {
-    padding: 120px 0; /* Aumentar el padding superior e inferior para mayor separación */
-    background-color: #000000;
+.form-group {
+  margin-bottom: 15px;
 }
 
-#services h2 {
-    font-weight: 700;
-    font-size: 48px;
-    color: #9c27b0;  
-    text-transform: uppercase;
-    margin-bottom: 80px; /* Aumentar el margen inferior para más espacio debajo del título */
+.form-control {
+  padding: 12px; /* Mejora el padding */
+  border: 1px solid #ccc; /* Borde suave */
+  border-radius: 5px; /* Bordes redondeados */
+  resize: none; /* Desactivar el resize */
 }
 
-#services h3 {
-    font-weight: 600;
-    font-size: 28px;
-    color: #9c27b0;
-    margin-bottom: 40px; /* Añadir más espacio debajo de los títulos */
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Mejora el tamaño del botón */
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold; /* Hacer el texto del botón más grueso */
 }
 
-#services p {
-    font-weight: 300;
-    font-size: 18px;
-    color: #d3d3d3;
-    line-height: 1.8;
-    margin-bottom: 40px; /* Aumentar el espacio debajo de cada párrafo */
+.btn-primary:hover {
+  background-color: #6c5ce7; /* Un color más claro al hacer hover */
 }
 
-.service-box {
-    background-color: #1a1a1a;
-    padding: 60px; /* Aumentar el padding para hacer las tarjetas más espaciosas */
-    margin-bottom: 60px; /* Añadir más espacio debajo de cada tarjeta */
-    border-radius: 15px;
-    transition: box-shadow 0.3s ease;
-    min-height: 450px;  /* Aumentar la altura mínima para mejorar la distribución */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.service-box:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-#services .row {
-    justify-content: space-evenly;
-    margin-bottom: 60px; /* Aumentar el espacio entre las filas */
-}
-
-#services .col-md-4 {
-    margin-bottom: 50px; /* Más espacio debajo de cada columna */
-}
-
-/* Sección Sobre Nosotros */
-.about-section {
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0;
-    background-color: rgba(0, 0, 0, 0.6);  /* Fondo semitransparente */
-}
-
-.about-section h2 {
-    font-size: 40px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    color: #eeeeee;  /* Color específico para el encabezado en esta sección */
-}
-
-.about-section p {
-    font-size: 18px;
-    max-width: 700px;
-    margin: 0 auto;
-    color: #dddddd;  /* Color específico para el texto */
-}
-
-.about-section p, .about-section li, .about-section span, .about-section a {
-    color: #eeeeee;  /* Color uniforme para textos en esta sección */
-}
-
-/* Formulario de Contacto */
-#contact {
-    background: #1c1c1c;
-    color: white;
-    padding: 50px 0;
-}
-
-#contact .card {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    padding: 40px;
-}
-
-#contact h1 {
-    color: #f8f8f8;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-#contact p {
-    color: #cccccc;  /* Color de texto */
-}
-
-#contact .custom-input {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: none;
-    border-radius: 5px;
-    padding: 15px;
-    color: #333;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-#contact .custom-input:focus {
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    outline: none;
-}
-
-#contact .custom-btn {
-    background-color: #007bff;
-    border-color: #007bff;
-    font-size: 18px;
-    padding: 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#contact .custom-btn:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
-
-#contact p, #contact li, #contact span, #contact a {
-    color: #f8f8f8;  /* Color claro para la sección de contacto */
-}
-
-/* Footer */
+/* Estilos para el footer */
 footer {
-    background-color: rgba(20, 20, 20, 0.95);  /* Fondo más oscuro */
-    color: #f5f5f5;  /* Texto claro */
-    padding: 40px 0;
-    text-align: center;
-    font-size: 14px;
+  background-color: #212529; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+  padding: 20px 0; /* Reducir espaciado superior e inferior */
+  text-align: center; /* Centrar el texto */
+  font-size: 14px; /* Tamaño de fuente */
+  margin: 0; /* Eliminar cualquier margen adicional */
+}
+
+/* Ajustes para los íconos de redes sociales */
+footer .social-icons {
+  display: flex; /* Usar flexbox para alinear los íconos */
+  justify-content: center; /* Centrar los íconos */
+  margin-bottom: 10px; /* Espacio entre íconos y el texto */
 }
 
 footer .social-icons a {
-    color: #f5f5f5;  /* Íconos de redes sociales claros */
-    margin: 0 10px;
-    font-size: 24px;
-    transition: color 0.3s ease;
+  color: #ffffff; /* Íconos en blanco */
+  margin: 0 10px; /* Espacio entre íconos */
+  font-size: 24px; /* Tamaño de los íconos */
+  transition: color 0.3s ease; /* Transición para el efecto hover */
 }
 
 footer .social-icons a:hover {
-    color: #f39c12;  /* Un ámbar elegante en hover */
+  color: #a876aa; /* Color en hover */
 }
 
 footer p {
-    color: #cccccc;  /* Texto en gris claro */
-}
-
-/* Desactivar el resize del textarea */
-textarea.custom-input {
-    resize: none;
-}
-
-/* Ajustes globales para móviles */
-@media (max-width: 576px) {
-    /* Ajuste del contenedor general */
-    .container {
-        padding: 0 15px;
-    }
-
-    /* Hero Section */
-    .hero h1 {
-        font-size: 30px;
-        margin-bottom: 20px;
-    }
-
-    .hero p {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    .hero a.btn {
-        padding: 10px 20px;
-        font-size: 14px;
-        display: block; /* Hacer el botón un bloque */
-        margin: 0 auto; /* Centrar el botón horizontalmente */
-        text-align: center; /* Centrar el texto dentro del botón */
-    }
-
-    /* Navbar */
-    .navbar .navbar-brand {
-        font-size: 1.2rem;
-    }
-
-    .navbar .navbar-nav {
-        display: block;
-        width: 100%;
-        background-color: rgba(20, 20, 20, 0.95); /* Fondo oscuro para el menú en móviles */
-    }
-
-    .navbar .navbar-nav .nav-link {
-        font-size: 1.1rem;
-        padding: 10px;
-        color: #f5f5f5;
-        text-align: center;
-        width: 100%; /* Cada enlace toma el ancho completo */
-    }
-
-    .navbar-toggler {
-        background-color: #d4af37; /* Color dorado para el botón de menú */
-    }
-
-    /* Servicios */
-    #services h2 {
-        font-size: 24px;
-    }
-
-    #services .service-box {
-        padding: 20px;
-        min-height: auto;
-        margin-bottom: 30px;
-    }
-
-    #services h3 {
-        font-size: 18px;
-    }
-
-    #services p {
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-    /* Contacto */
-    #contact h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    #contact p {
-        font-size: 14px;
-    }
-
-    #contact .custom-input {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    #contact .custom-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    /* Footer */
-    footer {
-        font-size: 12px;
-    }
+  color: #cccccc; /* Texto en gris claro */
+  margin: 0; /* Eliminar margen adicional del párrafo */
 }
 
 
-/* Ajustes para tabletas (pantallas medianas) */
+/* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
-    /* Hero Section */
-    .hero h1 {
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
+  .nav .container {
+    flex-direction: column; /* El contenido del navbar se organiza en columna en móviles */
+    align-items: center; /* Alinea los enlaces del navbar al centro */
+  }
 
-    .hero p {
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
+  .nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .hero a.btn {
-        padding: 12px 25px;
-        font-size: 16px;
-    }
+  .nav a {
+    padding: 10px 0; /* Reduce el padding en móviles */
+    font-size: 16px; /* Ajusta el tamaño de fuente en el navbar */
+  }
 
-    /* Servicios */
-    #services h2 {
-        font-size: 30px;
-        margin-bottom: 40px;
-    }
+  .hero h1 {
+    font-size: 28px; /* Reduce el tamaño de la fuente en el hero para móviles */
+  }
 
-    #services .service-box {
-        padding: 40px;
-        min-height: auto;
-    }
+  .hero p {
+    font-size: 14px; /* Ajusta el tamaño del párrafo en el hero */
+  }
 
-    #services h3 {
-        font-size: 22px;
-    }
+  .content {
+    padding: 50px 0; /* Reduce el espaciado en móviles */
+  }
 
-    #services p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
+  .content h2 {
+    font-size: 20px; /* Reduce el tamaño de los títulos en móviles */
+  }
 
-    /* Contacto */
-    #contact h1 {
-        font-size: 30px;
-        margin-bottom: 20px;
-    }
+  .content p {
+    font-size: 14px; /* Ajusta el tamaño de los párrafos en móviles */
+    line-height: 24px;
+  }
 
-    #contact p {
-        font-size: 16px;
-    }
+  /* Servicios: Ajusta la vista de los servicios en dispositivos móviles */
+  .row {
+    flex-direction: column;
+  }
 
-    #contact .custom-input {
-        padding: 12px;
-        font-size: 16px;
-    }
+  .service {
+    margin-bottom: 20px;
+    width: 100%; /* Ocupa todo el ancho en móviles */
+  }
 
-    #contact .custom-btn {
-        padding: 12px 30px;
-        font-size: 16px;
-    }
+  .service-card {
+    padding: 20px; /* Reduce el padding interno en móviles */
+  }
 }
 
-/* Ajustes para pantallas grandes (escritorios y laptops) */
-@media (min-width: 992px) {
-    /* Hero Section */
-    .hero h1 {
-        font-size: 56px;
-    }
+/* Responsividad para pantallas muy pequeñas (menos de 576px) */
+@media (max-width: 576px) {
+  .hero {
+    height: 80vh; /* Ajusta la altura del hero en pantallas muy pequeñas */
+  }
 
-    .hero p {
-        font-size: 22px;
-    }
+  .hero h1 {
+    font-size: 24px;
+  }
 
-    .navbar .navbar-brand {
-        font-size: 2rem;
-    }
+  .hero p {
+    font-size: 12px;
+  }
 
-    .navbar .navbar-nav .nav-link {
-        font-size: 1.2rem;
-    }
+  .service h3 {
+    font-size: 18px;
+  }
 
-    #services h2 {
-        font-size: 48px;
-    }
+  .service p {
+    font-size: 12px;
+  }
 
-    #services .service-box {
-        padding: 60px;
-    }
+  /* Ajustes adicionales para el formulario */
+  .form-group label {
+    font-size: 14px; /* Reduce el tamaño de los labels */
+  }
 
-    .service-box h3 {
-        font-size: 28px;
-    }
+  .form-control {
+    font-size: 14px; /* Ajusta el tamaño de las entradas de texto */
+  }
+
+  .btn-primary {
+    padding: 10px 15px; /* Ajusta el tamaño del botón */
+    font-size: 16px; /* Reduce el tamaño del texto del botón */
+  }
 }

@@ -12,7 +12,9 @@
   padding: 0;
 }
 
-body {
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Evita desplazamiento horizontal */
   font-family: "Montserrat", sans-serif;
   color: #222;
 }
@@ -44,10 +46,11 @@ body {
 .nav ul {
   display: flex;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav a {
-  position: relative;
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
@@ -66,13 +69,13 @@ body {
 .hero {
   background-image: url('https://images.unsplash.com/photo-1548284706-24b96b23d6d8?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
+  background-position: center;
   height: 100vh;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
 }
 
 .hero h1 {
@@ -106,11 +109,12 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 0 -10px; /* Asegurar que las columnas no se desborden */
 }
 
 .service {
-  flex: 1;
-  margin: 20px;
+  flex: 1 0 100%;
+  padding: 10px;
 }
 
 .service-card {
@@ -263,5 +267,9 @@ footer p {
   .btn-primary {
     font-size: 16px;
     padding: 10px 15px;
+  }
+
+  footer p {
+    font-size: 12px;
   }
 }

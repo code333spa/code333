@@ -1,141 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code 333 - Agencia Digital</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- AOS CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Code 333</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#hero">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">Servicios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-primary" href="#contact">Cotiza tu Proyecto</a>
-                </li>
-            </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <title>Code 333 - Agencia Digital</title>
+</head>
+
+<body>
+    <nav class="nav navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <h1 class="logo"><a href="#"><i class="fa-solid fa-moon"></i> Code 333</a></h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Cotiza tu Proyecto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero" id="hero">
+        <div class="container">
+            <h1>Transformamos tu negocio en digital</h1>
+            <p>Expertos en creación de sitios web de alto impacto y estrategias de marketing digital en redes sociales.</p>
         </div>
     </div>
-</nav>
 
-
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero d-flex align-items-center" style="background-image: url('/images/hero.jpg'); height: 100vh;">
-        <div class="container text-center text-white">
-            <h1 class="display-4 font-weight-bold">Transformamos tu negocio en digital</h1>
-            <p class="lead mt-3">Expertos en creación de sitios web de alto impacto y estrategias de marketing digital en redes sociales.</p>
-            <a href="#contact" class="btn btn-lg btn-light mt-4">Cotiza tu Proyecto</a>
-        </div>
-    </section>
-
-    <!-- Servicios -->
-    <section id="services" class="py-5" style="background-color: #000;">
-        <div class="container text-center">
-            <h2 class="mb-5" style="color: #a29bfe; font-family: 'Roboto', sans-serif;">Nuestros Servicios</h2>
-            <div class="row">
-                <!-- Desarrollo Web -->
-                <div class="col-md-3" data-aos="fade-up">
+    <section class="container content" id="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="row">
+            <!-- Desarrollo Web -->
+            <div class="service col-md-3" data-aos="fade-up">
+                <div class="service-card">
                     <i class="fas fa-code fa-3x mb-4" style="color: #a29bfe;"></i>
-                    <h3 style="color: #a29bfe; font-family: 'Roboto', sans-serif; font-weight: 700;">Desarrollo Web</h3>
-                    <p style="font-family: 'Roboto', sans-serif; font-weight: 300; color: #fff;">Diseñamos y desarrollamos sitios web modernos y optimizados, adaptados a las necesidades de tu marca, utilizando tecnologías avanzadas. Ideal para empresas que buscan una fuerte presencia digital con un diseño atractivo y funcional.</p>
+                    <h3>Desarrollo Web</h3>
+                    <p>Diseñamos y desarrollamos sitios web modernos y optimizados.</p>
                 </div>
-                <!-- Marketing en Redes Sociales -->
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+            </div>
+            <!-- Marketing en Redes Sociales -->
+            <div class="service col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card">
                     <i class="fas fa-bullhorn fa-3x mb-4" style="color: #a29bfe;"></i>
-                    <h3 style="color: #a29bfe; font-family: 'Roboto', sans-serif; font-weight: 700;">Marketing en Redes Sociales</h3>
-                    <p style="font-family: 'Roboto', sans-serif; font-weight: 300; color: #fff;">Gestionamos y potenciamos tu marca en plataformas clave como Instagram, Facebook y TikTok, implementando estrategias efectivas de contenido y publicidad para alcanzar tu público objetivo y aumentar el engagement.</p>
+                    <h3>Marketing Digital</h3>
+                    <p>Gestionamos tu marca en plataformas clave como Instagram y Facebook.</p>
                 </div>
-                <!-- SEO y Posicionamiento -->
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+            </div>
+            <!-- SEO y Posicionamiento -->
+            <div class="service col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card">
                     <i class="fas fa-search fa-3x mb-4" style="color: #a29bfe;"></i>
-                    <h3 style="color: #a29bfe; font-family: 'Roboto', sans-serif; font-weight: 700;">SEO y Posicionamiento</h3>
-                    <p style="font-family: 'Roboto', sans-serif; font-weight: 300; color: #fff;">Aumentamos tu visibilidad en buscadores como Google mediante la optimización de contenido y auditorías técnicas, ayudando a atraer más clientes y mejorar la conversión a través de estrategias personalizadas de SEO.</p>
+                    <h3>SEO y Posicionamiento</h3>
+                    <p>Aumentamos tu visibilidad en buscadores como Google.</p>
                 </div>
-                <!-- Mantenimiento y Soporte -->
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+            </div>
+            <!-- Mantenimiento y Soporte -->
+            <div class="service col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card">
                     <i class="fas fa-cogs fa-3x mb-4" style="color: #a29bfe;"></i>
-                    <h3 style="color: #a29bfe; font-family: 'Roboto', sans-serif; font-weight: 700;">Mantenimiento y Soporte</h3>
-                    <p style="font-family: 'Roboto', sans-serif; font-weight: 300; color: #fff;">Ofrecemos soporte continuo y desarrollo evolutivo para mantener tus productos y servicios digitales siempre operativos, con soluciones a medida que se adaptan a las necesidades de tu negocio y garantizan su actualización constante.</p>
+                    <h3>Mantenimiento y Soporte</h3>
+                    <p>Ofrecemos soporte continuo para mantener tus servicios digitales.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Nosotros -->
-    <section id="about" class="about-section d-flex align-items-center" style="background-image: url('/images/about.jpg'); background-size: cover; background-position: center;">
-        <div class="container text-center text-white">
-            <h2 class="mb-4">¿Quiénes somos?</h2>
-            <p class="lead mb-5">En <strong>Code 333</strong>, somos un equipo apasionado por el diseño, la tecnología y el marketing digital. Nuestra misión es ayudar a pequeñas y grandes empresas a sobresalir en el competitivo mundo digital.</p>
-            <p>Desde el desarrollo de sitios web dinámicos hasta la gestión integral de tus redes sociales, cada proyecto es tratado con la máxima dedicación para asegurar resultados medibles y crecimiento constante para tu negocio.</p>
-        </div>
+    <section class="container content" id="about">
+        <h2>¿Quiénes somos?</h2>
+        <p>En <strong>Code 333</strong>, somos un equipo apasionado por el diseño, la tecnología y el marketing digital. Nuestra misión es ayudar a pequeñas y grandes empresas a sobresalir en el competitivo mundo digital.</p>
+        <p>Contamos con un grupo de expertos en diversas áreas que trabajan en conjunto para ofrecer soluciones personalizadas y efectivas. Desde el desarrollo de sitios web dinámicos hasta estrategias de marketing digital, cada proyecto es tratado con dedicación y profesionalismo.</p>
+        <p>Nos esforzamos por mantenernos a la vanguardia de las tendencias del mercado, asegurando que nuestros clientes no solo alcancen sus objetivos, sino que también superen sus expectativas.</p>
+        <p>¡Conéctate con nosotros y transforma tu negocio en una experiencia digital exitosa!</p>
     </section>
 
-    <!-- Formulario  -->
-    <section id="contact" class="d-flex align-items-center" style="background-image: url('/images/form.jpg'); background-size: cover; height: 100vh;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-white">
-                    <h1 class="display-4 font-weight-bold">Dinos más sobre tu proyecto</h1>
-                    <p class="lead">Completa el siguiente formulario y nos pondremos en contacto para discutir los detalles. ¡Hagamos que tu negocio crezca en el mundo digital!</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="card p-4" style="background-color: rgba(0, 0, 0, 0.7); color: white; border-radius: 15px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);">
-                        <form action="https://formspree.io/f/manwgzoy" method="POST">
-                            <div class="form-group">
-                                <label for="name">Nombre completo</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="empresa">Empresa</label>
-                                <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Empresa">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Correo electrónico</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="telefono">Teléfono móvil</label>
-                                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Teléfono móvil">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Cuéntanos de tu proyecto</label>
-                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Explícanos brevemente tu proyecto" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">Enviar formulario</button>
-                        </form>                        
-                    </div>
-                </div>
+    <section class="container content" id="contact">
+        <h2>Contáctanos</h2>
+        <form action="https://formspree.io/f/manwgzoy" method="POST" class="bg-light p-4 rounded shadow">
+            <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Teléfono" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Cuéntanos de tu proyecto</label>
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Explícanos brevemente tu proyecto" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-3">Enviar formulario</button>
+        </form>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <div class="social-icons mb-3">
@@ -147,17 +125,24 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1000, // Duración de la animación
-        once: false,    // Permite que las animaciones se repitan
-      });
+        AOS.init({
+            duration: 1000,
+            once: false,
+        });
+
+        // Restablecer el formulario cuando la página se carga
+        window.onload = function() {
+            document.querySelector('form').reset();
+        };
     </script>
-    <script src="script.js"></script>
 </body>
+
 </html>
+
+

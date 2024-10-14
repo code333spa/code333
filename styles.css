@@ -15,7 +15,6 @@
 body {
   font-family: "Montserrat", sans-serif;
   color: #222;
-  padding-bottom: 0; /* Eliminar el padding inferior */
 }
 
 .container {
@@ -56,9 +55,8 @@ body {
   transition: var(--main-transition);
 }
 
-/* Asegura el color morado en hover */
 .nav a:hover {
-  color: #a29bfe !important; /* Color morado con prioridad */
+  color: #a29bfe !important;
 }
 
 .nav a.current {
@@ -89,7 +87,7 @@ body {
 }
 
 .content {
-  padding: 100px 0; /* Espaciado superior e inferior aumentado */
+  padding: 100px 0;
 }
 
 .content h2 {
@@ -107,37 +105,37 @@ body {
 .row {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
+  flex-wrap: wrap;
 }
 
 .service {
-  flex: 1; /* Permite que las tarjetas se expandan uniformemente */
-  margin: 20px; /* Espacio entre tarjetas */
+  flex: 1;
+  margin: 20px;
 }
 
 .service-card {
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
-  padding: 30px; /* Espaciado interno aumentado */
+  padding: 30px;
   text-align: center;
   color: white;
-  transition: transform 0.3s, box-shadow 0.3s; /* Suaviza la transición de transformación y sombra */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .service-card:hover {
-  transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada al pasar el mouse */
+  transform: scale(1.05);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
 }
 
 .service h3 {
-  margin: 10px 0; /* Espacio entre el título y el contenido */
-  font-size: 20px; /* Aumentar el tamaño de fuente */
+  margin: 10px 0;
+  font-size: 20px;
 }
 
 .service p {
-  color: #ddd; /* Texto más claro para el contenido */
-  font-size: 14px; /* Ajustar tamaño de texto */
+  color: #ddd;
+  font-size: 14px;
 }
 
 .form-group {
@@ -145,65 +143,61 @@ body {
 }
 
 .form-control {
-  padding: 12px; /* Mejora el padding */
-  border: 1px solid #ccc; /* Borde suave */
-  border-radius: 5px; /* Bordes redondeados */
-  resize: none; /* Desactivar el resize */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .btn-primary {
   background-color: var(--accent-color);
   color: white;
   border: none;
-  padding: 12px 20px; /* Mejora el tamaño del botón */
+  padding: 12px 20px;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: bold; /* Hacer el texto del botón más grueso */
+  font-weight: bold;
 }
 
 .btn-primary:hover {
-  background-color: #6c5ce7; /* Un color más claro al hacer hover */
+  background-color: #6c5ce7;
 }
 
 /* Estilos para el footer */
 footer {
-  background-color: #212529; /* Fondo oscuro */
-  color: #ffffff; /* Texto blanco */
-  padding: 20px 0; /* Reducir espaciado superior e inferior */
-  text-align: center; /* Centrar el texto */
-  font-size: 14px; /* Tamaño de fuente */
-  margin: 0; /* Eliminar cualquier margen adicional */
+  background-color: #212529;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
 }
 
-/* Ajustes para los íconos de redes sociales */
 footer .social-icons {
-  display: flex; /* Usar flexbox para alinear los íconos */
-  justify-content: center; /* Centrar los íconos */
-  margin-bottom: 10px; /* Espacio entre íconos y el texto */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 footer .social-icons a {
-  color: #ffffff; /* Íconos en blanco */
-  margin: 0 10px; /* Espacio entre íconos */
-  font-size: 24px; /* Tamaño de los íconos */
-  transition: color 0.3s ease; /* Transición para el efecto hover */
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s ease;
 }
 
 footer .social-icons a:hover {
-  color: #a876aa; /* Color en hover */
+  color: #a876aa;
 }
 
 footer p {
-  color: #cccccc; /* Texto en gris claro */
-  margin: 0; /* Eliminar margen adicional del párrafo */
+  color: #cccccc;
+  margin: 0;
 }
 
-
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 768px) {
+/* Responsividad para pantallas medianas */
+@media (max-width: 992px) {
   .nav .container {
-    flex-direction: column; /* El contenido del navbar se organiza en columna en móviles */
-    align-items: center; /* Alinea los enlaces del navbar al centro */
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav ul {
@@ -212,54 +206,42 @@ footer p {
   }
 
   .nav a {
-    padding: 10px 0; /* Reduce el padding en móviles */
-    font-size: 16px; /* Ajusta el tamaño de fuente en el navbar */
+    padding: 10px 0;
   }
 
   .hero h1 {
-    font-size: 28px; /* Reduce el tamaño de la fuente en el hero para móviles */
+    font-size: 36px;
   }
 
   .hero p {
-    font-size: 14px; /* Ajusta el tamaño del párrafo en el hero */
+    font-size: 14px;
   }
 
   .content {
-    padding: 50px 0; /* Reduce el espaciado en móviles */
+    padding: 50px 0;
   }
 
   .content h2 {
-    font-size: 20px; /* Reduce el tamaño de los títulos en móviles */
+    font-size: 22px;
   }
 
-  .content p {
-    font-size: 14px; /* Ajusta el tamaño de los párrafos en móviles */
-    line-height: 24px;
-  }
-
-  /* Servicios: Ajusta la vista de los servicios en dispositivos móviles */
   .row {
     flex-direction: column;
   }
 
   .service {
     margin-bottom: 20px;
-    width: 100%; /* Ocupa todo el ancho en móviles */
   }
 
   .service-card {
-    padding: 20px; /* Reduce el padding interno en móviles */
+    padding: 20px;
   }
 }
 
-/* Responsividad para pantallas muy pequeñas (menos de 576px) */
-@media (max-width: 576px) {
-  .hero {
-    height: 80vh; /* Ajusta la altura del hero en pantallas muy pequeñas */
-  }
-
+/* Responsividad para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
   .hero h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .hero p {
@@ -274,17 +256,12 @@ footer p {
     font-size: 12px;
   }
 
-  /* Ajustes adicionales para el formulario */
-  .form-group label {
-    font-size: 14px; /* Reduce el tamaño de los labels */
-  }
-
-  .form-control {
-    font-size: 14px; /* Ajusta el tamaño de las entradas de texto */
+  .content h2 {
+    font-size: 20px;
   }
 
   .btn-primary {
-    padding: 10px 15px; /* Ajusta el tamaño del botón */
-    font-size: 16px; /* Reduce el tamaño del texto del botón */
+    font-size: 16px;
+    padding: 10px 15px;
   }
 }

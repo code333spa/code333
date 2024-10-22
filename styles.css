@@ -17,6 +17,7 @@ html, body {
   overflow-x: hidden; /* Evita desplazamiento horizontal */
   font-family: "Montserrat", sans-serif;
   color: #222;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -67,7 +68,7 @@ html, body {
 }
 
 .hero {
-  background-image: url('https://images.unsplash.com/photo-1548284706-24b96b23d6d8?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url('./images/imgProgram.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -273,3 +274,5 @@ footer p {
     font-size: 12px;
   }
 }
+
+

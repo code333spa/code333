@@ -1,0 +1,278 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --accent-color: #a876aa;
+  --main-transition: all .3s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Evita desplazamiento horizontal */
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav {
+  position: fixed;
+  background-color: rgba(20, 20, 20, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: var(--main-transition);
+  text-transform: uppercase;
+  z-index: 1000;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: 300;
+  transition: var(--main-transition);
+}
+
+.nav a:hover {
+  color: #a29bfe !important;
+}
+
+.nav a.current {
+  color: var(--accent-color);
+}
+
+.hero {
+  background-image: url('./images/imgProgram.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 46px;
+  margin: -20px 0 20px;
+}
+
+.hero p {
+  font-size: 16px;
+  letter-spacing: 0.2rem;
+  font-weight: 200;
+}
+
+.content {
+  padding: 100px 0;
+}
+
+.content h2 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.content p {
+  color: #555;
+  line-height: 30px;
+  letter-spacing: 1.2px;
+}
+
+/* Estilos para el apartado de servicios */
+.row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 -10px; /* Asegurar que las columnas no se desborden */
+}
+
+.service {
+  flex: 1 0 100%;
+  padding: 10px;
+}
+
+.service-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+}
+
+.service h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.service p {
+  color: #ddd;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #6c5ce7;
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #212529;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+footer .social-icons a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #a876aa;
+}
+
+footer p {
+  color: #cccccc;
+  margin: 0;
+}
+
+/* Responsividad para pantallas medianas */
+@media (max-width: 992px) {
+  .nav .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav a {
+    padding: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 50px 0;
+  }
+
+  .content h2 {
+    font-size: 22px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .service {
+    margin-bottom: 20px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+}
+
+/* Responsividad para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
+  .service h3 {
+    font-size: 18px;
+  }
+
+  .service p {
+    font-size: 12px;
+  }
+
+  .content h2 {
+    font-size: 20px;
+  }
+
+  .btn-primary {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
+
+

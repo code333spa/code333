@@ -12,9 +12,11 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   width: 100%;
-  overflow-x: hidden; /* Evita desplazamiento horizontal */
+  overflow-x: hidden;
+  /* Evita desplazamiento horizontal */
   font-family: "Montserrat", sans-serif;
   color: #222;
   scroll-behavior: smooth;
@@ -67,7 +69,7 @@ html, body {
   color: var(--accent-color);
 }
 
-.hero {
+.home {
   background-image: url('./images/imgProgram.jpg');
   background-size: cover;
   background-position: center;
@@ -79,12 +81,12 @@ html, body {
   text-align: center;
 }
 
-.hero h1 {
+.home h1 {
   font-size: 46px;
   margin: -20px 0 20px;
 }
 
-.hero p {
+.home p {
   font-size: 16px;
   letter-spacing: 0.2rem;
   font-weight: 200;
@@ -110,7 +112,8 @@ html, body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 0 -10px; /* Asegurar que las columnas no se desborden */
+  margin: 0 -10px;
+  /* Asegurar que las columnas no se desborden */
 }
 
 .service {
@@ -215,11 +218,11 @@ footer p {
     padding: 10px 0;
   }
 
-  .hero h1 {
+  .home h1 {
     font-size: 36px;
   }
 
-  .hero p {
+  .home p {
     font-size: 14px;
   }
 
@@ -246,11 +249,11 @@ footer p {
 
 /* Responsividad para pantallas pequeñas (menos de 768px) */
 @media (max-width: 768px) {
-  .hero h1 {
+  .home h1 {
     font-size: 28px;
   }
 
-  .hero p {
+  .home p {
     font-size: 12px;
   }
 
@@ -275,5 +278,3 @@ footer p {
     font-size: 12px;
   }
 }
-
-

@@ -30,5 +30,13 @@ navbarNavLinks.forEach(link => {
 });
 
 
+// Actualiza automáticamente el año en el footer
+document.addEventListener("DOMContentLoaded", function () {
+    const yearElement = document.getElementById("year");
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
+
 
 

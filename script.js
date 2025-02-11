@@ -39,4 +39,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Script que quita el # de la URL al hacer clic en un enlace del navbar
+document.addEventListener("DOMContentLoaded", function () {
+    // Selecciona todos los enlaces del navbar
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            // Evita el comportamiento predeterminado del enlace
+            event.preventDefault();
+
+            // Obtiene el destino del enlace (sin el #)
+            const target = this.getAttribute('data-target');
+
+            // Desplaza la página hasta la sección correspondiente
+            document.getElementById(target).scrollIntoView({
+                behavior: 'smooth' // Desplazamiento suave
+            });
+
+            // Actualiza la URL sin el #
+            history.pushState(null, null, `/${target}`);
+        });
+    });
+});
 

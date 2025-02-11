@@ -15,7 +15,7 @@
 <body>
     <nav class="nav navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <h1 class="logo"><a href="#"> Code333 </a></h1>
+            <h1 class="logo"><a href="#home" data-target="home"> Code333 </a></h1>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -165,9 +165,9 @@
                 <div class="col-md-4 mb-3">
                     <h5 class="text-uppercase">Enlaces rápidos</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#services" class="text-white">Servicios</a></li>
-                        <li><a href="#about" class="text-white">Nosotros</a></li>
-                        <li><a href="#contact" class="text-white">Contacto</a></li>
+                        <li><a href="#services" class="text-white" data-target="services">Servicios</a></li>
+                        <li><a href="#about" class="text-white" data-target="about">Nosotros</a></li>
+                        <li><a href="#contact" class="text-white" data-target="contact">Contacto</a></li>
                         <li><a href="#" class="text-white">Política de Privacidad</a></li>
                         <li><a href="#" class="text-white">Términos y Condiciones</a></li>
                     </ul>
@@ -186,7 +186,8 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <button class="btn btn-primary" onclick="window.location.href='#contact'">Cotiza tu Proyecto</button>
+                <button class="btn btn-primary" data-target="contact" onclick="window.location.href='#contact'">Cotiza
+                    tu Proyecto</button>
             </div>
             <hr class="my-4">
             <div class="text-center">

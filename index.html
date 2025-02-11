@@ -213,22 +213,6 @@
             document.querySelector('form').reset();
         };
     </script>
-
-    <script>
-        // Maneja la redirección desde 404.html
-        const urlParams = new URLSearchParams(window.location.search);
-        const redirectPath = urlParams.get('redirect');
-
-        if (redirectPath) {
-            // Desplázate a la sección correspondiente
-            const targetSection = document.getElementById(redirectPath.replace('/', ''));
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
-            // Limpia la URL
-            history.replaceState(null, null, redirectPath);
-        }
-    </script>
 </body>
 
 </html>

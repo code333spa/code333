@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+        // Redirige a la sección correspondiente al cargar
+        var path = window.location.pathname.substring(1);
+        if (path) {
+            window.location.replace("/#" + path);
+        } else {
+            window.location.replace("/");
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

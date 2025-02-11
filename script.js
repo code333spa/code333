@@ -39,27 +39,48 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Script que quita el # de la URL al hacer clic en un enlace del navbar
 document.addEventListener("DOMContentLoaded", function () {
-    // Selecciona todos los enlaces del navbar
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
     navLinks.forEach(link => {
         link.addEventListener('click', function (event) {
-            // Evita el comportamiento predeterminado del enlace
             event.preventDefault();
 
-            // Obtiene el destino del enlace (sin el #)
             const target = this.getAttribute('data-target');
+            const targetElement = document.getElementById(target);
 
-            // Desplaza la página hasta la sección correspondiente
-            document.getElementById(target).scrollIntoView({
-                behavior: 'smooth' // Desplazamiento suave
-            });
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
 
-            // Actualiza la URL sin el #
-            history.pushState(null, null, `/${target}`);
+                // Cambia la URL sin # pero manteniendo el estado
+                history.pushState({ section: target }, "", `/${target}`);
+            }
         });
     });
-});
 
+    // Maneja cambios en la URL para navegar correctamente
+    window.addEventListener('popstate', function (event) {
+        const section = event.state?.section;
+        if (section) {
+            const targetElement = document.getElementById(section);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+
+    // Si la página se carga con una URL sin #, mueve la vista a la sección correcta
+    const path = window.location.pathname.substring(1);
+    if (path) {
+        const targetElement = document.getElementById(path);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    }
+});

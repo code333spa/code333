@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ##### RUTAS #####
 
-// Función para manejar clics en enlaces
+// Función para manejar clics en enlaces y botones
 function handleLinkClick(e) {
     e.preventDefault();
     const target = this.dataset.target;
@@ -54,9 +54,9 @@ function handleLinkClick(e) {
     window.history.pushState({}, '', `/${target}`);
 }
 
-// Aplicar a todos los enlaces del navbar y enlaces rápidos
-document.querySelectorAll('.nav-link, .list-unstyled a[data-target]').forEach(link => {
-    link.addEventListener('click', handleLinkClick);
+// Aplicar a todos los enlaces del navbar, enlaces rápidos y botones con data-target
+document.querySelectorAll('.nav-link, .list-unstyled a[data-target], button[data-target]').forEach(element => {
+    element.addEventListener('click', handleLinkClick);
 });
 
 // Manejar carga inicial y recargas

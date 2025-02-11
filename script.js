@@ -38,3 +38,44 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
+
+// ##### RUTAS #####
+// Manejar clics en el navbar
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = this.dataset.target;
+
+        // Desplazamiento suave
+        document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
+
+        // Actualizar URL sin #
+        window.history.pushState({}, '', `/${target}`);
+    });
+});
+
+// Manejar carga inicial y recargas
+window.addEventListener('load', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirectPath = urlParams.get('redirect');
+
+    if (redirectPath) {
+        // Eliminar la barra inicial si existe (ej: "/home" → "home")
+        const cleanPath = redirectPath.replace(/^\//, '');
+        const targetSection = document.getElementById(cleanPath);
+
+        if (targetSection) {
+            targetSection.scrollIntoView();
+            // Limpiar la URL después del scroll
+            window.history.replaceState({}, '', `/${cleanPath}`);
+        }
+    }
+});
+
+// Manejar navegación con botones atrás/adelante
+window.addEventListener('popstate', () => {
+    const path = window.location.pathname.replace('/', '');
+    const section = document.getElementById(path);
+    if (section) section.scrollIntoView();
+});

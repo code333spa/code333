@@ -41,18 +41,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // ##### RUTAS #####
-// Manejar clics en el navbar
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = this.dataset.target;
 
-        // Desplazamiento suave
-        document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
+// Función para manejar clics en enlaces
+function handleLinkClick(e) {
+    e.preventDefault();
+    const target = this.dataset.target;
 
-        // Actualizar URL sin #
-        window.history.pushState({}, '', `/${target}`);
-    });
+    // Desplazamiento suave
+    document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
+
+    // Actualizar URL sin #
+    window.history.pushState({}, '', `/${target}`);
+}
+
+// Aplicar a todos los enlaces del navbar y enlaces rápidos
+document.querySelectorAll('.nav-link, .list-unstyled a[data-target]').forEach(link => {
+    link.addEventListener('click', handleLinkClick);
 });
 
 // Manejar carga inicial y recargas

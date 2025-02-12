@@ -544,6 +544,25 @@ footer p {
 }
 
 /*=============== TERMINO DE CONDICIONES ===============*/
+
+/* SE APLICO PARA TERMINOS Y POLITICAS DE PRIVACIDAD */
 .tbr1 {
   padding-top: 105px;
+}
+
+/*=============== POLITICAS DE PRIVACIDAD ===============*/
+.custom-list {
+  list-style-type: disc;
+  /* Viñetas redondas */
+  padding-left: 20px;
+  /* Espaciado a la izquierda */
+  margin-bottom: 1rem;
+  /* Margen inferior */
+}
+
+.custom-list li {
+  margin-bottom: 0.5rem;
+  /* Espaciado entre elementos */
+  color: #333;
+  /* Color del texto */
 }

@@ -542,3 +542,8 @@ footer p {
     /* Tamaño más pequeño para pantallas muy pequeñas */
   }
 }
+
+/*=============== TERMINO DE CONDICIONES ===============*/
+.tbr1 {
+  padding-top: 105px;
+}

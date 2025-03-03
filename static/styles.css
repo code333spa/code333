@@ -74,7 +74,7 @@ body {
 
 /*=============== HOME SECTION ===============*/
 .home {
-  background-image: url('./images/imgProgram.jpg');
+  background-image: url('/static/images/main/imgProgram.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;

@@ -545,7 +545,7 @@ footer p {
 /* Responsive */
 @media (max-width: 768px) {
   .whatsapp-btn {
-    bottom: 20px;
+    bottom: 30px;
     left: 20px;
   }
 

@@ -409,6 +409,39 @@ body {
 }
 
 
+
+/*ANIMACIONES TOOLS*/
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.tool-logo {
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  /* Inicialmente oculto */
+  transform: translateX(-100%);
+  /* Fuera de pantalla */
+}
+
+/* Mantener el hover original */
+.tool-logo:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
 /*=============== CONTACT FORM ===============*/
 .form-group {
   margin-bottom: 15px;

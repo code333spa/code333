@@ -72,6 +72,43 @@ body {
   color: var(--accent-color);
 }
 
+.logo {
+  margin: 0;
+  padding: 0;
+  z-index: 1001;
+}
+
+.logo a {
+  display: block;
+  width: 180px;
+  /* Ajusta según tu logo */
+  height: 50px;
+  /* Ajusta según tu logo */
+  position: relative;
+  transition: var(--main-transition);
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /*=============== HOME SECTION ===============*/
 .home {
   background-image: url('/static/images/main/imgProgram.jpg');

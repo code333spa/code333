@@ -536,6 +536,11 @@ footer p {
   margin: 0;
 }
 
+.footer-text {
+  color: #f0f0f0;
+  opacity: 1;
+  font-size: 14px;
+}
 
 
 /*=============== WHATSAPP BUTTON ===============*/

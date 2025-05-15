@@ -807,20 +807,36 @@ footer p {
 
 
 /* --- Animación líneas banner ------------------------------------ */
-.hero-title {               /* tamaño y separación opcional */
-  font-size: 3rem;
-  line-height: 1.2;
+.hero-title {
+  /* 3 rem en desktop ↓ hasta 1.8 rem en pantallas muy pequeñas */
+  font-size: clamp(1.8rem, 5.5vw, 3rem);
+  line-height: 1.25;
 }
 
 .hero-title .line {
-  display: inline-block;    /* necesario para poder trasladar cada línea */
-  opacity: 0;
-  transform: translateX(-60px);   /* arranca fuera de pantalla hacia la izq */
+  display:inline-block;
+  opacity:0;
+  transform:translateX(-1em);   /* -1 em se escala con el font-size */
 }
 
 @keyframes slideIn {
   to {
-    opacity: 1;
-    transform: translateX(0);
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+/* ---- separador |  (desktop vs. mobile) ------------------------- */
+.sep{                     /* escritorio / tablet */
+  display:inline;
+}
+
+@media (max-width:768px){ /* móvil */
+  .sep{
+    display:block;        /* ocupa la fila completa → salto de línea   */
+    width:100%;
+    height:0;             /* no añade espacio vertical extra           */
+    font-size:0;          /* oculta el carácter |                      */
+    line-height:0;        /* asegura que no deje hueco                 */
   }
 }

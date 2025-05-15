@@ -12,3 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     toolLogos.forEach(logo => observer.observe(logo));
 });
+
+// animación titulo banner
+document.addEventListener('DOMContentLoaded', () => {
+    const line1 = document.querySelector('.line1');
+    const line2 = document.querySelector('.line2');
+
+    // Aplica la animación a la primera línea
+    line1.style.animation = 'slideIn 0.8s ease-out forwards';
+
+    // Cuando termine la primera, dispara la segunda
+    line1.addEventListener('animationend', () => {
+      line2.style.animation = 'slideIn 0.8s ease-out forwards';
+    });
+  });

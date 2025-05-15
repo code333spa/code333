@@ -536,12 +536,6 @@ footer p {
   margin: 0;
 }
 
-.footer-text {
-  color: #f0f0f0;
-  opacity: 1;
-  font-size: 14px;
-}
-
 
 /*=============== WHATSAPP BUTTON ===============*/
 .whatsapp-btn {
@@ -596,8 +590,6 @@ footer p {
     height: 50px;
   }
 }
-
-
 
 
 /*=============== RESPONSIVE DESIGN ===============*/
@@ -810,4 +802,25 @@ footer p {
   /* Espaciado entre elementos */
   color: #333;
   /* Color del texto */
+}
+
+
+
+/* --- Animación líneas banner ------------------------------------ */
+.hero-title {               /* tamaño y separación opcional */
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero-title .line {
+  display: inline-block;    /* necesario para poder trasladar cada línea */
+  opacity: 0;
+  transform: translateX(-60px);   /* arranca fuera de pantalla hacia la izq */
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

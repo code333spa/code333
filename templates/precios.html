@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planes y Precios - Code333</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .pricing-table {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem;
+    }
+    .plan {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      border-top: 6px solid #928e9b;
+      transition: transform 0.2s;
+    }
+    .plan:hover {
+      transform: scale(1.02);
+    }
+    .plan-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .plan-type {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 1rem;
+    }
+    .price {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+    .features li {
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .features li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #928e9b;
+    }
+    .btn {
+      background-color: #928e9b;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .tag-popular {
+      background-color: #ffda77;
+      color: #333;
+      padding: 0.3rem 0.6rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>💼 Planes y Precios — Elige el que más se adapta a tu negocio</h1>
+  <section class="pricing-table">
+
+    <div class="plan">
+      <div class="plan-title">Starter</div>
+      <div class="plan-type">Ideal para emprendedores</div>
+      <div class="price">$150.000 CLP</div>
+      <ul class="features">
+        <li>Sitio web estático</li>
+        <li>Formulario de contacto</li>
+        <li>SEO básico</li>
+        <li>Hosting incluido 1 año</li>
+      </ul>
+      <button class="btn">Solicitar demo</button>
+    </div>
+
+    <div class="plan">
+      <div class="tag-popular">⭐ Más elegido</div>
+      <div class="plan-title">Growth</div>
+      <div class="plan-type">Ideal para PYMEs</div>
+      <div class="price">$300.000 CLP</div>
+      <ul class="features">
+        <li>Todo lo anterior</li>
+        <li>Automatización de contacto</li>
+        <li>CRM básico</li>
+        <li>Google Analytics</li>
+        <li>Mejoras UX/UI</li>
+      </ul>
+      <button class="btn">Solicitar demo</button>
+    </div>
+
+    <div class="plan">
+      <div class="plan-title">Pro IA</div>
+      <div class="plan-type">Ideal para empresas digitales</div>
+      <div class="price">$500.000 CLP</div>
+      <ul class="features">
+        <li>Todo lo anterior</li>
+        <li>Chatbot con IA generativa</li>
+        <li>Flujos automatizados</li>
+        <li>Soporte dedicado mensual</li>
+      </ul>
+      <button class="btn">Solicitar demo</button>
+    </div>
+
+    <div class="plan">
+      <div class="plan-title">Enterprise</div>
+      <div class="plan-type">Ideal para escalado empresarial</div>
+      <div class="price">Desde $1.000.000 CLP</div>
+      <ul class="features">
+        <li>Consultoría a medida</li>
+        <li>Desarrollo de sistemas</li>
+        <li>Integración con ERPs</li>
+        <li>API y Dashboards personalizados</li>
+      </ul>
+      <button class="btn">Solicitar demo</button>
+    </div>
+
+  </section>
+</body>
+</html>
